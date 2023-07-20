@@ -100,7 +100,7 @@
 
 ## Solution
 
-Runtime-Level Exception Handling: Exception handling should become a platform-level issue, either at the runtime or operating system level. The execution environment should provide mechanisms for automatically handling and recovering from exceptions without explicit intervention from the programmer.
+- Runtime-Level Exception Handling: Exception handling should become a platform-level issue, either at the runtime or operating system level. The execution environment should provide mechanisms for automatically handling and recovering from exceptions without explicit intervention from the programmer.
 
 ## Decision Driver
 
@@ -112,7 +112,7 @@ Runtime-Level Exception Handling: Exception handling should become a platform-le
 
 ## Solution
 
-Because your code has a bug Therefore, it must be used Exception handler.
+- Because your code has a bug Therefore, it must be used Exception handler.
 
 ## Decision Driver
 
@@ -124,11 +124,11 @@ Because your code has a bug Therefore, it must be used Exception handler.
 
 ## Solution
 
-Just to add a bit of clarification: a: I am looking for best practices here and experience from the client side (since the client is lot more complicated and we would rather handle stuff at server side if we can keep client code simpler) b: The client contains a lot of legacy code and we may or may not be able to use C++ exceptions.
+- Just to add a bit of clarification: a: I am looking for best practices here and experience from the client side (since the client is lot more complicated and we would rather handle stuff at server side if we can keep client code simpler) b: The client contains a lot of legacy code and we may or may not be able to use C++ exceptions.
 
 ## Decision Driver
 
--handling exceptions and error codes in server-side code, considering the impact on client-side complexity and taking into account the perspective of managed clients versus native clients.
+- handling exceptions and error codes in server-side code, considering the impact on client-side complexity and taking into account the perspective of managed clients versus native clients.
 
 ================================================================
 
@@ -144,31 +144,37 @@ Just to add a bit of clarification: a: I am looking for best practices here and 
 
 # Problem09 : JAVA’S EXCEPTIONS (S34)
 
-## Solution1 : removing the error from the normal path of data by wrapping it in an exception adds an unnecessary level of complexity, making the overall result of a code path harder to predict (S34)
+## Solution: 
+
+- Java's exceptions add complexity, making code paths less predictable. They occur outside the usual data flow, leading to confusing and fragile code. Handling exceptions becomes the responsibility of the function caller if users don't follow guidelines 
 
 ## Drivers :
 
-• predictability, readability, and maintainability of the code. (S34)
+- predictability, readability, and maintainability of the code
 
 ================================================================
 
 # Problem10 : Handling the Unexpected Exception: Too Many Open Files (S16)
 
-## Solution1 : Collaborating with a Sysadmin: Working with a seasoned Linux sysadmin is recommended to assess the system's needs, conduct performance testing, and determine the appropriate file descriptor limit based on the specific requirements of the application and the resources it accesses (S16)
+## Solution : 
+
+- utilizing a dependency management tool like Maven for managing project dependencies and collaborating with a seasoned Linux sysadmin to determine the optimal file descriptor limit based on the application's requirements and resource usage 
 
 ## Drivers :
 
-• need to address the file descriptor limits in Linux and determine the appropriate limit for the application. This drives the decision to consider using a dependency management tool like Maven and collaborating with a seasoned Linux sysadmin to optimize the file descriptor limit based on the application's requirements and resource usage (S16)
+- OOptimize Linux file descriptor limits with Maven and a Linux sysadmin's expertise, tailored to your application's needs 
 
 ================================================================
 
 # Problem12 : A Good Way to Handle Errors Is To Prevent Them from Happening in the First Place (S17)
 
-## Solution1 : Implement robust exception handling in your code to gracefully handle exceptions and recover from them when possible. This can involve using try-catch blocks to catch specific exceptions and handle them appropriately, providing meaningful error messages, and taking appropriate actions to prevent application termination (S17)
+## Solution : 
+
+- for a robust and reliable application, implement exceptional handling, leverage the .NET framework's consistent exception mechanism, and use exceptions as a superior error notification method over traditional approaches like return codes to ensure effective issue identification and program reliability
 
 ## Drivers :
 
-• centered around promoting a mindset shift towards proactive error prevention, rather than solely relying on reactive error handling, and encourages developers to consider this approach in their team's practices (S17)
+- Promotes proactive error prevention over reactive handling and encourages its adoption in team practices
 
 ================================================================
 
